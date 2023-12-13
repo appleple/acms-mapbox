@@ -1,8 +1,8 @@
+const path = require('path')
+
 module.exports = {
-    // mode: 'development',
     mode: 'development',
     target: ['web', 'es5'],
-
     entry: {
         mapboxunit: './js/mapboxunitbeforewebpack.js',
         mapboxcluster: './js/mapboxclusterbeforewebpack.js',
@@ -25,9 +25,10 @@ module.exports = {
             }
         ]
     },
-    // devtool: 'inline-source-map',
     devServer: {
-        contentBase: `${__dirname}/dist`,
+        static: {
+            directory: path.resolve(__dirname, 'dist'),
+        },
         port: 8080,
         open: true
     }
