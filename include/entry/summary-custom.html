@@ -1,0 +1,31 @@
+<!-- BEGIN_MODULE Entry_Summary id="summary_custom" -->
+<div class="module-section">
+	@include("/admin/module/setting.html")
+
+	<!-- BEGIN notFound -->
+	<div>
+		<p>記事が見つかりませんでした。</p>
+	</div>
+	<!-- END notFound -->
+
+	<ul class="card clearfix">
+		<!-- BEGIN unit:loop -->
+		<!-- BEGIN entry:loop -->
+		<li class="card-item js-autoheight-r {entry:loop.class}">
+			<a href="{url}" class="card-link">
+				<div class="card-img"><!-- BEGIN main_photo@path:veil -->
+					<img src="%{MEDIA_ARCHIVES_DIR}{main_photo@path}[resizeImg(480,480)]" alt="" class="acms-img-responsive">
+					<!-- END main_photo@path:veil -->
+					<!-- BEGIN main_photo@path:empty -->
+					<img src="/images/noImage.png" alt="" class="acms-img-responsive">
+					<!-- END main_photo@path:empty -->
+				</div>
+				<p class="card-title">{title}</p>
+			</a>
+		</li><!-- END entry:loop -->
+		<!-- END unit:loop -->
+	</ul>
+	<!-- ページャー -->
+	@include("/include/parts/pager.html")
+</div>
+<!-- END_MODULE Entry_Summary -->

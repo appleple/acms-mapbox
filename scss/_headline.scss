@@ -1,0 +1,32 @@
+/* ------------------------------
+　　ヘッドライン
+------------------------------ */
+.headline-item {
+	line-height: 1.5;
+}
+.headline-link {
+	color: #333;
+	@include transition(background-color .25s ease-out);
+
+	&:hover,
+	&:visited,
+	&:active,
+	&:focus {
+		color: #333;
+	}
+
+	&:hover {
+		padding: 10px;
+		background: #F1F1F1;
+	}
+}
+.headline-title {
+	margin: 0 10px;
+}
+@media screen and (max-width: $breakpoint-sm-max){ /* 画面幅が小さいとき */
+	/* ヘッドライン */
+	.headline-title {
+		display: block;
+		margin: 0;
+	}
+}

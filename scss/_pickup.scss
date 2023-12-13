@@ -1,0 +1,38 @@
+/* ------------------------------
+　　ピックアップリスト
+------------------------------ */
+.pickup-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pickup-list-item {
+	transition: opacity .2s;
+	&:hover {
+		@include opacity(.75);
+	}
+}
+
+.pickup-img {
+	display: block;
+	@include transition(opacity .25s ease-out);
+	backface-visibility: hidden;
+}
+
+.pickup-title {
+	margin: 5px 0 10px;
+	color: #333;
+	@include font-size(14);
+}
+
+.pickup-title-link {
+	color: #333;
+
+	&:hover,
+	&:visited,
+	&:active,
+	&:focus {
+		color: #333;
+	}
+}

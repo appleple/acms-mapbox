@@ -1,0 +1,107 @@
+/* ------------------------------
+　　ページャー
+------------------------------ */
+.pager {
+	margin: 0 -5px 50px -5px;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+	li {
+		display: inline-block;
+		margin: 0 5px;
+		 &.cur { /* 現在いる位置 */
+			padding: 5px 20px;
+			color: #FFF;
+			background: #767676;
+			border-radius: 3px;
+		}
+	}
+}
+.pager-link {
+	display: block;
+	padding: 5px 20px;
+	color: #333;
+	background: $base-color;
+	border-radius: 3px;
+	 &:visited,
+	 &:focus,
+	 &:active {
+		color: #333;
+	}
+	 &:hover {
+		color: #FFF;
+		text-decoration: none;
+		background: #333;
+	}
+}
+.pager-link-forward {
+	float: right;
+}
+.pager-link-prev {
+	float: left;
+}
+@media screen and (min-width: $breakpoint-md-min){
+	.pager-link {
+		padding: 5px 10px;
+	}
+	.pager {
+		li {
+			 &.cur { /* 現在いる位置 */
+				padding: 5px 10px;
+			}
+		}
+	}
+}
+
+/* 前後リンク */
+.serial-nav {
+	margin: -$entry-margin-bottom 0 60px 0;
+	padding: 0;
+	list-style: none;
+	.serial-nav-item {
+		display: block;
+		float: none;
+	}
+	.serial-nav-item-prev {
+		text-align: left;
+	}
+	.serial-nav-item-next {
+		text-align: right;
+	}
+	a {
+		display: block;
+		padding: 25px 0;
+		color: #333;
+		border-bottom: 1px solid $base-color;
+		 &:hover,
+		 &:visited,
+		 &:focus,
+		 &:active {
+			color: inherit;
+			text-decoration: none;
+		}
+		 &:hover {
+			background: $base-color;
+		}
+	}
+}
+@media screen and (min-width: $breakpoint-md-min){
+	.serial-nav {
+		margin: 0 0 60px 0;
+		border: 0;
+		.serial-nav-item-prev {
+			float: left;
+		}
+		.serial-nav-item-next {
+			float: right;
+		}
+		a {
+			display: inline;
+			border: 0;
+			 &:hover {
+				text-decoration: underline;
+				background: 0;
+			}
+		}
+	}
+}

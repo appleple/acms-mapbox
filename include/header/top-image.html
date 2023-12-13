@@ -1,0 +1,17 @@
+<!-- BEGIN_MODULE Media_Banner id="top_image" -->
+<div class="module-section">
+	@include("/admin/module/setting.html")
+	<div class="js-slider">
+		<!-- BEGIN banner:loop --><div class="{banner:loop.class}">
+			<!-- BEGIN banner#src -->
+			{src}[raw]
+			<!-- END banner#src -->
+			<!-- BEGIN banner#img -->
+			<a href="{url}" target="{target}" class="slider-item" tabindex="-1">
+				<img src="%{MEDIA_ARCHIVES_DIR}{img}[resizeImg(1150)]" width="1150" alt="{alt}" class="acms-img-responsive slider-image" />
+			</a>
+			<!-- END banner#img -->
+		</div><!-- END banner:loop -->
+	</div>
+</div>
+<!-- END_MODULE Media_Banner -->

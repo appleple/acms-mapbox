@@ -1,0 +1,47 @@
+/* ------------------------------
+　　リスト
+------------------------------ */
+@media screen and (min-width: $breakpoint-md-min){
+	/* リスト */
+	a.list-link.acms-list-group-item {
+		padding: 10px 20px 10px 10px;
+		@include transition(padding .15s ease-out);
+		 &:hover {
+			padding: 10px 10px 10px 20px;
+			@include transition(padding .25s ease-out);
+		}
+	}
+	/* ラベルがあったとき */
+	a.list-link.acms-list-group-label-parent {
+		padding: 10px 30px 10px 10px;
+		@include transition(padding .15s ease-out);
+		&:hover {
+			padding: 10px 30px 10px 20px;
+		}
+	}
+}
+
+/* 検索結果 */
+.list-results-wrap {
+	margin: 15px 0 15px 0; 
+	padding: 10px; 
+	border: 1px solid #CCC;
+}
+.list-results-heading { 
+	margin: 0 0 10px 0;
+	padding: 5px;
+	background: #E5E5E5; 
+}
+.list-results {
+	position: relative;
+	margin: 0;
+}
+.list-results-item {
+	position: absolute;
+	width: 100px;
+}
+.list-results-detail {
+	margin: 0;
+	padding: 0 0 0 100px;
+	font-weight: bold;
+}

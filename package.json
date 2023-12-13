@@ -1,0 +1,36 @@
+{
+  "name": "beginner2020",
+  "version": "1.0.0",
+  "description": "テーマ「beginner2020」2020/07/29版 ====================================",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx webpack-dev-server",
+    "build": "npx webpack",
+    "watch": "npx webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSelfAtu/mapbox_cluster.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheSelfAtu/mapbox_cluster/issues"
+  },
+  "homepage": "https://github.com/TheSelfAtu/mapbox_cluster#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "core-js": "^3.6.5",
+    "regenerator-runtime": "^0.13.7",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

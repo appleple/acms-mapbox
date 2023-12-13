@@ -1,0 +1,143 @@
+<!-- BEGIN_MODULE Form -->
+
+<!-- BEGIN step -->
+<!-- フォームステップ：初期 -->
+<div class="contact-box">
+	<section>
+		<h2>お電話でのお問い合わせ</h2>
+		<!-- BEGIN_MODULE Blog_Field -->
+		<div><!-- BEGIN tel:veil -->
+			<p class="contact-no">Tel : <a href="tel:{tel}">{tel}</a></p><!-- END tel:veil --><!-- BEGIN tel_time:veil -->
+			<p>{tel_time}</p><!-- END tel_time:veil -->
+			<!-- BEGIN_MODULE Touch_SessionWithAdministration -->
+			<p class="acms-admin-module-edit"><a href="/bid/{id}/admin/blog_edit/?edit=update#acms_custom" class="js-dialog-btn js-link_no_rewrite">編集</a></p>
+			<!-- END_MODULE Touch_SessionWithAdministration -->
+		</div>
+		<!-- END_MODULE Blog_Field -->
+	</section>
+
+	<section>
+		<h2>メールでのお問い合わせ</h2>
+		<!-- フォームステップ -->
+		@include("/contact/form/step.html")
+		<p>ご質問やご要望がありましたら、お気軽にお問い合わせください。</p>
+
+		<form action="" method="post" class="h-adr acms-form" enctype="multipart/form-data">
+			@include("/contact/form/input.html")
+			<!-- BEGIN_MODULE Category_Field --><div>
+			<p>{contact_supplementary}[nl2br|raw]</p>
+			<!-- BEGIN_MODULE Touch_SessionWithAdministration -->
+			<p class="acms-admin-module-edit"><a href="/bid/%{BID}/cid/{id}/admin/category_edit/?edit=update#acms_custom" class="js-dialog-btn js-link_no_rewrite">編集</a></p>
+			<!-- END_MODULE Touch_SessionWithAdministration -->
+			</div><!-- END_MODULE Category_Field -->
+			<div class="form-btn-box clearfix">
+				<input type="hidden" name="step" value="confirm" />
+				<input type="hidden" name="error" value="reapply" />
+
+				<input type="hidden" name="id" value="contactForm" />
+				<input type="submit" name="ACMS_POST_Form_Confirm" value="送信内容の確認へ" id="btnConfirm" class="btn-attention-block-large" />
+				<hr class="clearHidden" />
+			</div>
+		</form>
+	</section>
+</div>
+<!-- END step -->
+
+<!-- BEGIN step#reapply -->
+<!-- フォームステップ：修正・エラー -->
+<div class="contact-box">
+	<section>
+		<h2>メールでのお問い合わせ</h2>
+		<!-- フォームステップ -->
+		@include("/contact/form/step.html")
+		<p class="message">入力内容を、もう一度ご確認下さい。</p>
+
+		<form action="" method="post" class="h-adr acms-form" enctype="multipart/form-data">
+			@include("/contact/form/input.html")
+			<div class="form-btn-box clearfix">
+				<input type="hidden" name="step" value="confirm" />
+				<input type="hidden" name="error" value="reapply" />
+
+				<input type="hidden" name="id" value="contactForm" />
+				<input type="submit" name="ACMS_POST_Form_Confirm" value="送信内容の確認へ" id="btnConfirm" class="btn-attention-block-large" />
+				<hr class="clearHidden" />
+			</div>
+		</form>
+	</section>
+</div>
+<!-- END step#reapply -->
+
+
+<!-- BEGIN step#confirm -->
+<!-- フォームステップ：確認画面 -->
+<div class="contact-box">
+	<section>
+		<h2>メールでのお問い合わせ</h2>
+		<!-- フォームステップ -->
+		@include("/contact/form/step.html")
+		<p class="message">内容に誤りがないか、よくご確認ください。</p>
+		@include("/contact/form/confirm.html")
+		<div class="form-btn-box clearfix">
+			<form action="" method="post" class="form-btn form-btn-return">
+				<input type="hidden" name="step" value="reapply" />
+				<input type="hidden" name="takeover" value="{takeover}" />
+				<input type="submit" name="ACMS_POST_Form_Chain" value="戻る" id="btnToInput" class="btn-large" />
+			</form>
+
+			<form action="thanks.html" method="post" class="form-btn form-btn-send" enctype="multipart/form-data">
+				<input type="hidden" name="To[]" value="{email}" />
+				<input type="hidden" name="AdminReply-To[]" value="{email}" />
+				<input type="hidden" name="AdminFrom[]" value="{email}" />
+				<input type="hidden" name="step" value="result" />
+				<input type="hidden" name="takeover" value="{takeover}" />
+				<input type="hidden" name="id" value="contactForm" />
+				<input type="submit" name="ACMS_POST_Form_Submit" value="送信する" id="btnSubmit" class="btn-attention-block-large" />
+			</form>
+		</div>
+	</section>
+</div>
+<!-- END step#confirm -->
+
+<!-- BEGIN step#result -->
+<!-- フォームステップ：完了画面 -->
+<div class="contact-box">
+	<section>
+		<h2>メールでのお問い合わせ</h2>
+		<div class="message-group">
+			<p class="message-text">お問い合わせありがとうございました。以下の内容で送信しました。</p>
+			<p class="message-back-link"><a href="%{BASE_URL}">→ トップページへ戻る</a></p>
+		</div>
+		@include("/contact/form/confirm.html")
+	</section>
+</div>
+<!-- END step#result -->
+
+<!-- BEGIN step#forbidden -->
+<div class="contact-box">
+	<section>
+		<h2>不正なアクセスです。</h2>
+		<div class="message-group">
+			<p class="message-text">お手数ですが、はじめからやり直して下さい。</p>
+			<p class="message-back-link"><a href="%{BASE_URL}contact/">→ お問い合わせフォームへ戻る</a></p>
+		</div>
+	</section>
+</div>
+<!-- END step#forbidden -->
+
+<!-- BEGIN step#repeated -->
+<div class="contact-box">
+	<section>
+		<h2>連続投稿は禁止されています。</h2>
+		<div class="message-group">
+			<p class="message-text">入力された内容は正常に送信されました。<br>送信内容は、登録されたメールアドレス宛にお送りした確認メールからご確認ください。</p>
+			<p class="message-back-link"><a href="%{BASE_URL}">→ トップページへ戻る</a></p>
+		</div>
+	</section>
+</div>
+<!-- END step#repeated -->
+
+<!-- BEGIN error -->
+	<!-- フォームID : {formID} / エラー項目 : {errorKey} -->
+<!-- END error -->
+
+<!-- END_MODULE Form -->

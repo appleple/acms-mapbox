@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+	@include("/include/head/meta.html")
+	@include("/include/head/link.html")
+	@include("/include/head/js.html")
+</head>
+<body>
+<!-- ヘッダー -->
+@include("/include/header.html")
+
+<!-- ページタイトル -->
+@include("/include/header/page-title.html")
+
+<!-- トピックパス -->
+@include("/include/header/topicpath.html")
+
+<div class="acms-container js-pretty-scroll-container">
+	<!-- ※管理用パーツ -->
+	@include("/admin/action.html")
+
+	<div class="acms-grid">
+		<main class="acms-col-lg-9 main">
+			<div class="main-inner is-space-right">
+				<!-- エントリーボディ（各カスタムフィールド表示） -->
+				@include("/include/entry/body-realestate.html")
+
+				<!-- 確認用テンプレート -->
+				@include("/include/check-seo.html")
+			</div>
+		</main>
+
+		<div class="acms-col-lg-3 side">
+			<div class="js-pretty-scroll">
+				<!-- エントリーリスト -->
+				@include("/include/entry/list.html")
+
+				<!-- カテゴリーリスト -->
+				@include("/include/category/list.html")
+
+				<!-- 検索フォーム -->
+				@include("/include/parts/search.html")
+
+				<!-- ピックアップリスト -->
+				@include("/include/entry/summary-pickup.html")
+
+				<!-- バナー -->
+				@include("/include/siteparts/banner.html")
+
+				<!-- リンクリスト -->
+				@include("/include/siteparts/link-list.html")
+
+				<div class="acms-hide-pc">
+					<!-- モバイル：ナビゲーションメニュー -->
+					@include("/include/parts/mobile-nav.html")
+					<!-- SNSアカウントへのリンク -->
+					@include("/include/footer/sns-link.html")
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- お問い合わせ -->
+@include("/include/footer/suggest.html")
+
+<!-- フッター -->
+@include("/include/footer.html")
+</body>
+</html>

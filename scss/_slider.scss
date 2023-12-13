@@ -1,0 +1,242 @@
+/* ------------------------------
+　　スライダー
+------------------------------ */
+.slick-slider {
+	padding: 0 0 12px 0;
+	img {
+		margin: 0 auto;
+	}
+}
+.fix-height {
+	height: $main-slider-height-mobile; /* はじめのちらつき防止 */
+	overflow: hidden; /* はじめのちらつき防止 */
+}
+.slick-slide:hover {
+	cursor: pointer;
+}
+.slick-list:focus {
+	&:focus {
+		position: relative;
+		&:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			border: 2px dotted $focus-color;
+			content: "";
+		}
+	}
+}
+.js-slider .slick-list {
+	&:focus {
+		position: relative;
+		&:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			border: 2px dotted $focus-color;
+			content: "";
+		}
+	}
+}
+.main-slider-image {
+	height: $main-slider-height-mobile;
+	background: no-repeat center #333;
+	background-size: cover;
+	a {
+		 &:hover {
+			text-decoration: none;
+		}
+	}
+}
+.main-slider-text-outer {
+	height: 100%;
+}
+.main-slider-text-wrap {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+.main-slider-text-inner {
+	display: table-cell;
+	padding: 0 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.main-slider-main-copy {
+	margin: 0;
+	color: #FFF;
+	font-weight: bold;
+	@include font-size(24);
+}
+.main-slider-side-copy {
+	margin: 0;
+	color: #FFF;
+	@include font-size(16);
+}
+
+/* ちらつき防止 */
+.slick-track,
+.slick-list {
+	-webkit-transform: translateZ(0);
+	-webkit-perspective: 1000;
+}
+
+/* 矢印ナビゲーション */
+.slick-prev,
+.slick-next {
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 19px;
+	height: 60px;
+	margin-top: -29px;
+	padding: 0;
+	color: transparent;
+	font-size: 0;
+	line-height: 0;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	&:focus {
+		border: 1px dotted #FFF;
+	}
+}
+.slick-prev {
+	left: 10px;
+	background: url("../../images/marker/icon_white_arrow_left.png") no-repeat;
+}
+.slick-next {
+	right: 10px;
+	background: url("../../images/marker/icon_white_arrow_right.png") no-repeat;
+}
+
+/* ドットのナビゲーション */
+.slick-dots {
+	position: relative;
+	clear: both;
+	margin: -35px 0 0 0;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+}
+.slick-dots li {
+	display: inline-block;
+}
+.slick-dots li button {
+	position: relative;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 8px;
+	font-size: 0;
+	background: #FFF;
+	border: 1px solid transparent;
+	border-radius: 7px;
+	content: "";
+}
+.slick-dots li button:focus {
+	border: 1px solid $primary-color;
+	outline: 0;
+}
+.slick-dots li:hover button {
+	cursor: pointer;
+}
+.slick-dots li.slick-active button {
+	background: $primary-color;
+}
+.slick-dots button {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+#autoplay-btn {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 1;
+	width: 50px;
+	height: 50px;
+	color: #FFF;
+	background: rgba(0,0,0,.7);
+	border: 0;
+	border-radius: 50%;
+	outline: 0;
+	@if ($enable-iphonex == true) {
+		right: calc(10px + constant(safe-area-inset-right));
+	}
+	&:hover {
+		background: rgba(0,0,0,.9);
+	}
+	&:active:before,
+	&:focus:before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 1px dotted #FFF;
+		content: "";
+	}
+	&:after{
+		position: absolute;
+		top: 15px;
+		left: 17px;
+		display: block;
+		box-sizing: border-box;
+		width: 16px;
+		height: 20px;
+		margin-left: 0;
+		border-top: none;
+		border-right: 5px solid #FFF;
+		border-bottom: none;
+		border-left: 5px solid #FFF;
+		content: "";
+	}
+	&.active:after{
+		left: 15px;
+		width: 0;
+		height: 0;
+		margin-left: 5px;
+		border-color: transparent transparent transparent #FFF;
+		border-style: solid;
+		border-width: 10px 0 10px 15px;
+	}
+}
+
+@media screen and (min-width: $breakpoint-md-min){
+	.slick-prev {
+		left: 50px;
+	}
+	.slick-next {
+		right: 50px;
+	}
+	.fix-height {
+		height: $main-slider-height-desktop; /* はじめのちらつき防止 */
+	}
+	.main-slider-image {
+		height: $main-slider-height-desktop;
+	}
+	.main-slider-main-copy {
+		@include font-size(40);
+	}
+	.main-slider-side-copy {
+		@include font-size(24);
+	}
+}

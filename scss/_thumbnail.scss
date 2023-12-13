@@ -1,0 +1,39 @@
+/* ------------------------------
+　　サムネイル
+------------------------------ */
+.thumbnail {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.thumbnail-item {
+	transition: opacity .2s;
+	&:hover {
+		@include opacity(.75);
+	}
+}
+
+.thumbnail-link {
+	display: block;
+	color: #333;
+	&:hover {
+		color: #333;
+		text-decoration: none;
+	}
+	&:visited {
+		color: #333;
+	}
+}
+
+.thumbnail-img {
+	display: block;
+	@include transition(opacity .25s ease-out);
+	backface-visibility: hidden;
+}
+
+.thumbnail-title {
+	margin: 5px 0 10px;
+	font-weight: bold;
+	@include font-size(15);
+}

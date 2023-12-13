@@ -1,0 +1,49 @@
+/* ------------------------------
+　　物件情報
+------------------------------ */
+/* 地図 */
+.realestate-map {
+	overflow: hidden;
+}
+.realestate-map .js-s2d-ready,
+.realestate-map [class*='column-map-'] {
+	width: auto!important;
+	max-width: 100%;
+}
+.realestate-map img[class*='column-map-'] {
+	width: auto!important;
+	max-width: 100%;
+	height: auto;
+}
+.realestate-map-entry {
+	margin: 0 10px;
+}
+.entry-column {
+	table.realestate-search {
+		margin: 20px 0 30px 0;
+	}
+}
+@media screen and (min-width: $breakpoint-lg-min){
+	.table-nowrap {
+		white-space: nowrap;
+	}
+}
+
+/* 物件情報 */
+.realestate-search {
+	input {
+		box-sizing: border-box;
+	}
+}
+
+@media screen and (max-width: $breakpoint-md-max){
+	.realestate-search {
+		th,td {
+			display: block;
+			@include box-sizing(border-box);
+		}
+		input {
+			@include box-sizing(border-box);
+		}
+	}
+}

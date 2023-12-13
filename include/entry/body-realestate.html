@@ -1,0 +1,74 @@
+<!-- BEGIN_MODULE Entry_Body -->
+	<!-- BEGIN notFound -->
+	<section class="acms-entry">
+		<h1 class="not-found-title">Not Found</h1>
+		<p>ただいまページを準備しております。もうしばらくお待ちください。</p>
+	</section>
+	<!-- END notFound -->
+
+	<!-- 1記事▼▼ -->
+	<!-- BEGIN entry:loop -->
+	<div class="acms-box-medium">
+	@include("/admin/entry/revision-info.html")
+	</div>
+	<article class="entry clearfix">
+		@include("admin/entry/title.html")
+		<!-- BEGIN title:veil -->
+		<!-- エントリーのタイトル　開始▼▼ -->
+		<header class="acms-page-header page-header clearfix">
+			<h1 class="entry-title"><a href="{titleUrl}">{title}</a></h1>
+		</header>
+		<!-- END title:veil -->
+
+		<div class="acms-entry entry-column">
+			<div class="acms-grid entry-column-grid">
+
+				<!-- カスタムフィールドの読み込み -->
+				@include("/include/entry/field.html")
+
+				<!-- BEGIN unit:veil -->
+				@include("/include/unit.html")
+				<hr class="clearHidden" />
+				<!-- END unit:veil -->
+				<!-- BEGIN continueLink:veil -->
+				<p><a href="{continueUrl}">「{continueName}」の続きを読む</a></p>
+				<!-- END continueLink:veil -->
+
+				<!-- BEGIN_MODULE Touch_Entry -->
+				<!-- カスタムフィールドの読み込み -->
+				@include("/include/entry/field_foot.html")
+				<!-- END_MODULE Touch_Entry -->
+			</div>
+		</div>
+
+
+		<!-- BEGIN formBody -->
+		@include("/include/form/unit.html")
+		<hr class="clearHidden" >
+		<!-- END formBody -->
+
+		@include("/admin/entry/edit-%{IS_ADMIN}.html")
+
+		<!-- BEGIN_MODULE Touch_Entry -->
+		<!-- BEGIN tag:veil -->
+		<footer class="entry-footer">
+			<div class="clearfix">
+				<dl class="entry-tag">
+					<dt class="acms-inline-space entry-tag-icon"><span class="acms-icon-tag"></span><span class="acms-hide-visually">タグ</span></dt>
+					<!-- BEGIN tag:loop -->
+					<dd class="entry-tag-item acms-inline-space"><a href="{url}">{name}</a></dd>
+					<!-- END tag:loop -->
+				</dl>
+			</div>
+		</footer><!-- END tag:veil -->
+		<!-- END_MODULE Touch_Entry -->
+
+		@include("/admin/entry/action.html")
+
+	</article>
+	<!-- END entry:loop -->
+	<!-- 1記事▲▲ -->
+
+	<!-- ページャー -->
+	@include("/include/module/entry/pager.html")
+<!-- END_MODULE Entry_Body -->

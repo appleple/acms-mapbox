@@ -1,0 +1,43 @@
+/* ------------------------------
+　　カード
+------------------------------ */
+.card {
+	margin: 0 0 40px 0;
+	padding: 0;
+	list-style: none;
+	border-left: 1px solid $base-color;
+}
+.card-item {
+	border-top: 1px solid $base-color;
+	border-right: 1px solid $base-color;
+	border-bottom: 1px solid $base-color;
+}
+.card-link {
+	display: block;
+	margin: 0 ($grid-space/-2);
+	padding: 10px;
+	color: #333;
+	&:hover {
+		text-decoration: none;
+		background: #EEE;
+		@include transition(background-color .25s linear);
+	}
+
+	&:hover,
+	&:visited,
+	&:active,
+	&:focus {
+		color: #333;
+	}
+}
+.card-img {
+	margin: 0 0 10px 0;
+}
+.card-title {
+	margin: 0;
+	@include font-size(16);
+	font-weight: bold;
+}
+.card-detail {
+	@include font-size(13);
+}

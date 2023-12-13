@@ -1,0 +1,37 @@
+/* ------------------------------
+　　テキストユニットのエディターの設定
+------------------------------ */
+/* エントリー内ボタン */
+.#{$entry-class},
+.entryFormLiteEditor {
+	.entry-btn-default {
+		background: $btn-default-color;
+		@include btn-base();
+		@include btn-small();
+
+		&:hover {
+			@include btn-color($btn-start-color, $btn-end-color, #FFF);
+		}
+
+		&:active,
+		&:focus {
+			background: $btn-active-color;
+		}
+	}
+
+	/* 色付きボタン */
+	.entry-btn-attention {
+		background: $btn-attention-default-color;
+		@include btn-base();
+		@include btn-small();
+
+		&:hover {
+			@include btn-color($btn-attention-start-color, $btn-attention-end-color, #FFF);
+		}
+
+		&:active,
+		&:focus {
+			background: $btn-attention-active-color;
+		}
+	}
+}

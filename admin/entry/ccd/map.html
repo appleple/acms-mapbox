@@ -1,0 +1,69 @@
+<!-- Maboxライブラリ読み込み -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+ 
+<!--Mapbox Geocoderの読み込み 検索フォームに入力した場所の位置を取得 -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+    type="text/css" />
+ 
+<script src="/js/mapboxfield.js"></script>
+<!-- Mapboxライブラリ読み込み ここまで-->
+ 
+<!-- BEGIN_MODULE Blog_Field -->
+<!-- 管理画面＞ブログ＞カスタム設定に入力した値の呼び出し -->
+<div id="accesstoken_styleurl" data-accesstoken="{mapbox_accesstoken}" data-styleurl="{mapbox_styleurl}"></div>
+<!-- END_MODULE Blog_Field -->
+ 
+<!-- 地図が挿入される -->
+<div id='fmapwrapper' style="width: 820px; height: 320px; max-width: 100% ; margin-left: auto; margin-right: auto;">
+    <div id='fmap' style='width: 820px; height: 80%; max-width: 100%;' data-lat="{fmapbox-lat}" data-lng="{fmapbox-lng}"
+        data-zoom="{fmapbox-zoom}" data-pitch="{fmapbox-pitch}" data-bearing="{fmapbox-bearing}"
+        data-mapsize="{fmapbox-mapsize}" data-maptype="field">
+    </div>
+    <!-- 地図の検索ボックス -->
+    <div id="geocoder" style="width: 100%; height: 45px;" class="geocoder"></div>
+</div>
+ 
+<!-- BEGIN_MODULE Touch_Edit -->
+<table class="acms-admin-table-admin-edit">
+    <tr>
+        <th>経度</th>
+        <td>
+            <input id="lng" type="text" name="fmapbox-lng" value="{fmapbox-lng}" class="acms-admin-form-width-full" />
+            <input type="hidden" name="field[]" value="fmapbox-lng" />
+        </td>
+    </tr>
+    <tr>
+        <th>緯度</th>
+        <td>
+            <input id="lat" type="text" name="fmapbox-lat" value="{fmapbox-lat}" class="acms-admin-form-width-full" />
+            <input type="hidden" name="field[]" value="fmapbox-lat" />
+        </td>
+    </tr>
+    <tr>
+        <th>ズーム</th>
+        <td>
+            <input id="zoom" type="text" name="fmapbox-zoom" value="5" class="acms-admin-form-width-full" />
+            <input type="hidden" name="field[]" value="fmapbox-zoom" />
+        </td>
+    </tr>
+    <tr>
+        <th>角度</th>
+        <td>
+            <input id="pitch" type="text" name="fmapbox-pitch" value="{fmapbox-pitch}"
+                class="acms-admin-form-width-full" />
+            <input type="hidden" name="field[]" value="fmapbox-pitch" />
+        </td>
+    </tr>
+    <tr>
+        <th>回転</th>
+        <td>
+            <input id="bearing" type="text" name="fmapbox-bearing" value="{fmapbox-bearing}"
+                class="acms-admin-form-width-full" />
+            <input type="hidden" name="field[]" value="fmapbox-bearing" />
+        </td>
+    </tr>
+</table>
+<!-- END_MODULE Touch_Edit -->

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+	@include("/include/head/meta.html")
+	@include("/include/head/link.html")
+	<link href="/js/slick/slick.css" rel="stylesheet">
+	@include("/include/head/js.html")
+	<script src="/js/slick/slick.js" charset="UTF-8"></script>
+	<script src="/js/top.js" charset="UTF-8"></script>
+</head>
+<body>
+<!-- ヘッダー -->
+@include("/include/header.html")
+
+<div class="acms-container js-pretty-scroll-container">
+	<!-- ※管理用パーツ -->
+	@include("/admin/action.html")
+
+	@include("/include/header/top-image.html")
+
+	<div class="acms-grid">
+		<main class="acms-col-lg-9 main">
+			<div class="main-inner is-space-right">
+				<!-- エントリーヘッドライン（トップ用） -->
+				@include("/include/entry/headline-top.html")
+
+				<!-- エントリーサマリー -->
+				@include("/include/entry/summary-top.html")
+
+				<!-- 確認用テンプレート -->
+				@include("/include/check-seo.html")
+			</div>
+		</main>
+
+		<div class="acms-col-lg-3 side">
+			<div class="js-pretty-scroll">
+				<!-- 検索フォーム -->
+				@include("/include/parts/search.html")
+
+				<!-- ピックアップリスト -->
+				@include("/include/entry/summary-pickup.html")
+
+				<!-- バナー -->
+				@include("/include/siteparts/banner.html")
+
+				<!-- リンクリスト -->
+				@include("/include/siteparts/link-list.html")
+
+				<!-- モバイル：ナビゲーションメニュー -->
+				@include("/include/parts/mobile-nav.html")
+
+				<!-- ログインボタン -->
+				@include("/include/parts/login-button.html")
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- お問い合わせ -->
+@include("/include/footer/suggest.html")
+
+<!-- フッター -->
+@include("/include/footer.html")
+</body>
+</html>
+
+

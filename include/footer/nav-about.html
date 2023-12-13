@@ -1,0 +1,98 @@
+<footer class="foot-wrapper">
+	<!-- BEGIN_MODULE Blog_Field -->
+	<div class="footer acms-container sp-container">
+		<div class="acms-grid">
+			<address class="acms-col-md-4">
+				<dl class="company-about">
+					<!-- BEGIN companyName:veil --><dt class="company-name">{companyName}</dt><!-- END companyName:veil -->
+					<!-- BEGIN zip:veil --><dd class="company-detail">〒{zip}</dd><!-- END zip:veil -->
+					<!-- BEGIN address:veil --><dd class="company-detail">{address}</dd><!-- END address:veil -->
+					<!-- BEGIN tel:veil --><dd class="company-detail">TEL : <a href="tel:{tel}">{tel}</a><!-- BEGIN_MODULE Touch_SessionWithCompilation --> <span class="edit-link">[<a href="%{SCRIPT_ROOT}bid/%{BID}/admin/blog_edit/#acms_custom">編集</a>]</span><!-- END_MODULE Touch_SessionWithCompilation --></dd><!-- END tel:veil -->
+				</dl>
+			</address>
+
+			<div class="acms-col-md-8">
+				<div class="clearfix">
+					<div class="footer-nav">
+
+						<!-- BEGIN_MODULE Navigation id="footer_nav_about" -->
+						<div class="footer-nav-item">
+						@include("/admin/module/setting.html")
+						<!-- BEGIN moduleField --><h2 class="footer-nav-title">{module_heading}</h2><!-- END moduleField -->
+						<!-- BEGIN navigation:loop -->
+							<!-- BEGIN ul#front --><ul class="footer-nav-list"><!-- END ul#front -->
+								<!-- BEGIN li#front --><li {attr} class="c_{level}" ><!-- END li#front -->
+									<!-- BEGIN link#front --><a href="{url}" target="{target}"><!-- END link#front -->
+									{label}[raw]
+									<!-- BEGIN link#rear --></a><!-- END link#rear -->
+								<!-- BEGIN li#rear --></li><!-- END li#rear -->
+							<!-- BEGIN ul#rear --></ul><!-- END ul#rear -->
+						<!-- END navigation:loop -->
+						</div>
+						<!-- END_MODULE Navigation -->
+
+
+						<!-- BEGIN_MODULE Navigation id="footer_nav_products" -->
+						<div class="footer-nav-item">
+						@include("/admin/module/setting.html")
+						<!-- BEGIN moduleField --><h2 class="footer-nav-title">{module_heading}</h2><!-- END moduleField -->
+						<!-- BEGIN navigation:loop -->
+							<!-- BEGIN ul#front --><ul class="footer-nav-list"><!-- END ul#front -->
+								<!-- BEGIN li#front --><li {attr} class="c_{level}" ><!-- END li#front -->
+									<!-- BEGIN link#front --><a href="{url}" target="{target}"><!-- END link#front -->
+									{label}[raw]
+									<!-- BEGIN link#rear --></a><!-- END link#rear -->
+								<!-- BEGIN li#rear --></li><!-- END li#rear -->
+							<!-- BEGIN ul#rear --></ul><!-- END ul#rear -->
+						<!-- END navigation:loop -->
+						</div>
+						<!-- END_MODULE Navigation -->
+
+						<!-- BEGIN_MODULE Navigation id="footer_nav_news" -->
+						<div class="footer-nav-item">
+						@include("/admin/module/setting.html")
+						<!-- BEGIN moduleField --><h2 class="footer-nav-title">{module_heading}</h2><!-- END moduleField -->
+						<!-- BEGIN navigation:loop -->
+							<!-- BEGIN ul#front --><ul class="footer-nav-list"><!-- END ul#front -->
+								<!-- BEGIN li#front --><li {attr} class="c_{level}" ><!-- END li#front -->
+									<!-- BEGIN link#front --><a href="{url}" target="{target}"><!-- END link#front -->
+									{label}[raw]
+									<!-- BEGIN link#rear --></a><!-- END link#rear -->
+								<!-- BEGIN li#rear --></li><!-- END li#rear -->
+							<!-- BEGIN ul#rear --></ul><!-- END ul#rear -->
+						<!-- END navigation:loop -->
+						</div>
+						<!-- END_MODULE Navigation -->
+
+						<!-- BEGIN_MODULE Navigation id="footer_nav_contact" -->
+						<div class="footer-nav-item">
+						@include("/admin/module/setting.html")
+						<!-- BEGIN moduleField --><h2 class="footer-nav-title">{module_heading}</h2><!-- END moduleField -->
+						<!-- BEGIN navigation:loop -->
+							<!-- BEGIN ul#front --><ul class="footer-nav-list"><!-- END ul#front -->
+								<!-- BEGIN li#front --><li {attr} class="c_{level}" ><!-- END li#front -->
+									<!-- BEGIN link#front --><a href="{url}" target="{target}"><!-- END link#front -->
+									{label}[raw]
+									<!-- BEGIN link#rear --></a><!-- END link#rear -->
+								<!-- BEGIN li#rear --></li><!-- END li#rear -->
+							<!-- BEGIN ul#rear --></ul><!-- END ul#rear -->
+						<!-- END navigation:loop -->
+						</div>
+						<!-- END_MODULE Navigation -->
+					</div>
+				</div>
+
+				<div class="acms-hide acms-block-lg acms-block-xl">
+					<!-- SNSアカウントへのリンク -->
+					@include("/include/footer/sns-link.html")
+				</div>
+				<p class="page-top"><a class="scrollTo" href="#"><span class="page-top-btn">ページの先頭へ</span></a></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="copyright">
+		<p class="copyright-text acms-container acms-text-center"><!-- BEGIN_MODULE Blog_Field -->{site_footer}<!-- END_MODULE Blog_Field --> powered by <a href="http://www.a-blogcms.jp/"><img src="/images/acms.png" width="96" alt="a-blog cms" class="copryright-logo" /></a></p>
+	</div>
+	<!-- END_MODULE Blog_Field -->
+</footer>

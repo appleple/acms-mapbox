@@ -1,0 +1,227 @@
+<div class="js-media-field" style="margin: 0 10px;">
+	<h4>メインイメージ</h4>
+	<div class="js-media-field acms-admin-margin-bottom-small">
+		<div class="js-droparea" data-thumbnail="{main_photo@thumbnail}" data-type="image" style="max-width:820px"></div>
+		<p class="js-text acms-admin-text-danger" style="display:none">許可されていないファイルのため挿入できません。</p>
+		<div class="acms-admin-margin-top-mini">
+			<button type="button" class="js-insert acms-admin-btn" data-type="image">メディアを選択</button>
+		</div>
+		<input type="hidden" name="main_photo" value="{main_photo}" class="js-value" />
+		<input type="hidden" name="field[]" value="main_photo" />
+		<input type="hidden" name="main_photo:extension" value="media" />
+	</div>
+	<div class="acms-admin-form-action acms-admin-form-action-separate">
+		<div class="acms-admin-form-side-btn acms-admin-text-nowrap">
+			<label for="input-text-main_caption">キャプション</label>
+		</div>
+		<input type="text" name="main_caption" value="{main_caption}" id="input-text-main_caption" class="acms-admin-form-width-medium">
+		<input type="hidden" name="field[]" value="main_caption">
+	</div>
+</div>
+
+<div>
+	<div class="acms-admin-col-md-4 acms-admin-margin-bottom-medium js-media-field">
+		<h4>サブイメージ1</h4>
+		<div class="js-media-field acms-admin-margin-bottom-small">
+			<div class="js-droparea" data-thumbnail="{sub_photo01@thumbnail}" data-type="image" style="max-width:400px"></div>
+			<p class="js-text acms-admin-text-danger" style="display:none">許可されていないファイルのため挿入できません。</p>
+			<div class="acms-admin-margin-top-mini">
+				<button type="button" class="js-insert acms-admin-btn" data-type="image">メディアを選択</button>
+			</div>
+			<input type="hidden" name="sub_photo01" value="{sub_photo01}" class="js-value" />
+			<input type="hidden" name="field[]" value="sub_photo01" />
+			<input type="hidden" name="sub_photo01:extension" value="media" />
+		</div>
+		<div class="acms-admin-form-action acms-admin-form-action-separate">
+			<div class="acms-admin-form-side-btn acms-admin-text-nowrap">
+				<label for="input-text-sub_caption01">キャプション</label>
+			</div>
+			<input type="text" name="sub_caption01" value="{sub_caption01}" id="input-text-sub_caption01" class="acms-admin-form-width-medium">
+			<input type="hidden" name="field[]" value="sub_caption01">
+		</div>
+	</div>
+
+	<div class="acms-admin-col-md-4 acms-admin-margin-bottom-medium js-media-field">
+		<h4>サブイメージ2</h4>
+		<div class="js-media-field acms-admin-margin-bottom-small">
+			<div class="js-droparea" data-thumbnail="{sub_photo02@thumbnail}" data-type="image" style="max-width:400px"></div>
+			<p class="js-text acms-admin-text-danger" style="display:none">許可されていないファイルのため挿入できません。</p>
+			<div class="acms-admin-margin-top-mini">
+				<button type="button" class="js-insert acms-admin-btn" data-type="image">メディアを選択</button>
+			</div>
+			<input type="hidden" name="sub_photo02" value="{sub_photo02}" class="js-value" />
+			<input type="hidden" name="field[]" value="sub_photo02" />
+			<input type="hidden" name="sub_photo02:extension" value="media" />
+		</div>
+		<div class="acms-admin-form-action acms-admin-form-action-separate">
+			<div class="acms-admin-form-side-btn acms-admin-text-nowrap">
+				<label for="input-text-sub_caption02">キャプション</label>
+			</div>
+			<input type="text" name="sub_caption02" value="{sub_caption02}" id="input-text-sub_caption02" class="acms-admin-form-width-medium">
+			<input type="hidden" name="field[]" value="sub_caption02">
+		</div>
+	</div>
+
+	<div class="acms-admin-col-md-4 acms-admin-margin-bottom-medium js-media-field">
+		<h4>サブイメージ3</h4>
+		<div class="js-media-field acms-admin-margin-bottom-small">
+			<div class="js-droparea" data-thumbnail="{sub_photo03@thumbnail}" data-type="image" style="max-width:400px"></div>
+			<p class="js-text acms-admin-text-danger" style="display:none">許可されていないファイルのため挿入できません。</p>
+			<div class="acms-admin-margin-top-mini">
+				<button type="button" class="js-insert acms-admin-btn" data-type="image">メディアを選択</button>
+			</div>
+			<input type="hidden" name="sub_photo03" value="{sub_photo03}" class="js-value" />
+			<input type="hidden" name="field[]" value="sub_photo03" />
+			<input type="hidden" name="sub_photo03:extension" value="media" />
+		</div>
+		<div class="acms-admin-form-action acms-admin-form-action-separate">
+			<div class="acms-admin-form-side-btn acms-admin-text-nowrap">
+				<label for="input-text-sub_caption03">キャプション</label>
+			</div>
+			<input type="text" name="sub_caption03" value="{sub_caption03}" id="input-text-sub_caption03" class="acms-admin-form-width-medium">
+			<input type="hidden" name="field[]" value="sub_caption03">
+		</div>
+	</div>
+</div>
+
+<div style="margin: 10px;" class="acms-admin-table-responsive acms-admin-clear">
+	<table class="acms-admin-table acms-admin-table-bordered">
+		<tr>
+			<th><label for="input-text-address">所在地</label></th>
+			<th><label for="input-text-station">最寄駅</label></th>
+			<th><label for="input-text-toho">徒歩</label></th>
+			<th><label for="input-text-kubun">区分</label></th>
+			<th colspan="2"><label for="input-text-kai">階</label>/<label for="input-text-kaidate">階建</label></th>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" name="address" value="{address}" id="input-text-address" style="width: 20ch;">
+				<input type="hidden" name="field[]" value="address">
+			</td>
+			<td>
+				<select name="station" id="input-text-station">
+					<option value="">未設定</option>
+					<option value="あの駅"{station:selected#あの駅}>あの駅</option>
+					<option value="この駅"{station:selected#この駅}>この駅</option>
+					<option value="その駅"{station:selected#その駅}>その駅</option>
+				</select>
+				<input type="hidden" name="field[]" value="station">
+			</td>
+			<td>
+				<input type="text" name="toho" value="{toho}" id="input-text-toho" style="width: 5ch;">分
+				<input type="hidden" name="field[]" value="toho">
+				<input type="hidden" name="toho:c" value="a">
+			</td>
+			<td>
+				<select name="kubun" id="input-text-kubun">
+					<option value="">未設定</option>
+					<option value="一戸建て"{kubun:selected#一戸建て}>一戸建て</option>
+					<option value="マンション"{kubun:selected#マンション}>マンション</option>
+					<option value="アパート"{kubun:selected#アパート}>アパート</option>
+				</select>
+				<input type="hidden" name="field[]" value="kubun">
+			</td>
+			<td>
+				<input type="text" name="kai" value="{kai}" id="input-text-kai" style="width: 3ch;">階
+				<input type="hidden" name="field[]" value="kai">
+				<input type="hidden" name="kai:c" value="a">
+			</td>
+			<td>
+				<input type="text" name="kaidate" value="{kaidate}" id="input-text-kaidate" style="width: 3ch;">階建
+				<input type="hidden" name="field[]" value="kaidate">
+				<input type="hidden" name="kaidate:c" value="a">
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div style="margin: 10px;" class="acms-admin-table-responsive">
+	<table class="acms-admin-table acms-admin-table-bordered">
+		<tr>
+			<th><label for="input-text-price">家賃</label></th>
+			<th><label for="input-text-kanri">管理費等</label></th>
+			<th><label for="input-select-shiki">敷金</label>/<label for="input-text-rei">礼金</label></th>
+			<th><label for="input-select-madori">間取</label></th>
+			<th><label for="input-text-menseki">専有面積</label></th>
+			<th><label for="input-text-chikunen">築年数</label></th>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" name="price" value="{price}" id="input-text-price" style="width: 8ch;">円
+				<input type="hidden" name="field[]" value="price">
+				<input type="hidden" name="price:c" value="a">
+			</td>
+			<td>
+				<input type="text" name="kanri" value="{kanri}" id="input-text-kanri" style="width: 8ch;">円
+				<input type="hidden" name="field[]" value="kanri">
+				<input type="hidden" name="kanri:c" value="a">
+			</td>
+			<td class="acms-admin-text-nowrap">
+				<select name="shiki" id="input-select-shiki">
+					<option value="無"{shiki:selected#無}>無</option>
+					<option value="有"{shiki:selected#有}>有</option>
+				</select>
+				<input type="hidden" name="field[]" value="shiki">/
+				<select name="rei" id="input-text-rei">
+					<option value="無"{rei:selected#無}>無</option>
+					<option value="有"{rei:selected#有}>有</option>
+				</select>
+				<input type="hidden" name="field[]" value="rei">
+			</td>
+			<td>
+				<select name="madori" id="input-select-madori">
+					<option value=""></option>
+					<!-- <option value="ワンルーム"{madori:selected#ワンルーム}>ワンルーム</option> -->
+					<option value="1K"{madori:selected#1K}>1K</option>
+					<option value="1DK"{madori:selected#1DK}>1DK</option>
+					<option value="1LDK"{madori:selected#1LDK}>1LDK</option>
+					<option value="2K"{madori:selected#2K}>2K</option>
+					<option value="2DK"{madori:selected#2DK}>2DK</option>
+					<option value="2LDK"{madori:selected#2LDK}>2LDK</option>
+					<option value="3K"{madori:selected#3K}>3K</option>
+					<option value="3DK"{madori:selected#3DK}>3DK</option>
+					<option value="3LDK"{madori:selected#3LDK}>3LDK</option>
+					<option value="4K"{madori:selected#4K}>4K</option>
+					<option value="4DK"{madori:selected#4DK}>4DK</option>
+					<option value="4LDK"{madori:selected#4LDK}>4LDK</option>
+					<!-- <option value="4LDK以上"{madori:selected#4LDK以上}>4LDK以上</option> -->
+				</select>
+				<input type="hidden" name="field[]" value="madori">
+			</td>
+			<td>
+				<input type="text" name="menseki" value="{menseki}" id="input-text-menseki" style="width: 8ch;"><span class="acms-admin-form-side">m<sup>2</sup></span>
+				<input type="hidden" name="field[]" value="menseki">
+				<input type="hidden" name="menseki:c" value="a">
+			</td>
+			<td>
+				<input type="text" name="chikunen" value="{chikunen}" id="input-text-chikunen" style="width: 5ch;">年
+				<input type="hidden" name="field[]" value="chikunen">
+				<input type="hidden" name="chikunen:c" value="a">
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="realestate-map realestate-map-entry js-open-street-map-editable" style="margin: 10px;">
+	<h3>地図</h3>
+	<div class="acms-admin-margin-bottom-mini acms-admin-osm-container">
+		<div class="acms-admin-gmap-container js-open-street-map-picker"></div>
+	</div>
+	<div class="acms-admin-margin-bottom-small">
+		<label for="input-text-map_lat">緯度</label> <input type="text" name="map_lat" value="{map_lat}" size="9" id="input-text-map_lat" class="js-osm-lat">
+		<label for="input-text-map_lng">経度</label> <input type="text" name="map_lng" value="{map_lng}" size="10" id="input-text-map_lng" class="js-osm-lng">
+		<label for="input-text-map_zoom">ズーム</label> <input type="text" name="map_zoom" value="{map_zoom}" size="5" id="input-text-map_zoom" class="js-osm-zoom">
+		<input type="hidden" name="field[]" value="map_lat">
+		<input type="hidden" name="field[]" value="map_lng">
+		<input type="hidden" name="field[]" value="map_zoom">
+	</div>
+	<div class="acms-admin-grid">
+		<div class="acms-admin-col-md-6">
+			<label for="input-text-map-search">検索</label>
+			<div class="acms-admin-form-action acms-admin-form-action-seperate">
+				<input type="text" name="" value="" id="input-text-map-search" class="js-osm-search acms-admin-form-width-full">
+				<span class="acms-admin-form-side-btn"><input type="button" name="" value="検索" class="js-osm-search-btn acms-admin-btn"></span>
+			</div>
+		</div>
+	</div>
+</div>

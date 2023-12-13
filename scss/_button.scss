@@ -1,0 +1,128 @@
+/* ------------------------------
+　　ボタン
+------------------------------ */
+.btn {
+	background: $btn-default-color;
+	border: 0;
+	@include btn-base();
+	@include btn-small();
+	 &:hover {
+		@include btn-color($btn-start-color, $btn-end-color, #FFF);
+	}
+	 &:active,
+	 &:focus {
+		background: $btn-active-color;
+	}
+}
+/* ボタン　色付き */
+.btn-attention {
+	background: $btn-attention-default-color;
+	border: 0;
+	@include btn-base();
+	@include btn-small();
+	 &:hover {
+		@include btn-color($btn-attention-start-color, $btn-attention-end-color, #FFF);
+	}
+	 &:active,
+	 &:focus {
+		background: $btn-attention-active-color;
+	}
+}
+
+/* ボタンサイズ大 */
+.btn-large {
+	background: $btn-default-color;
+	@include btn-base();
+	@include btn-large();
+	@include box-sizing(border-box);
+	@include transition(background-color .25s linear);
+	 &:hover {
+		background: $btn-hover-color;
+	}
+	 &:active,
+	 &:focus {
+		background: $btn-active-color;
+	}
+}
+/* ボタンサイズ大 色付き */
+.btn-attention-large {
+	background: $btn-attention-default-color;
+	@include btn-base();
+	@include btn-large();
+	@include box-sizing(border-box);
+	@include transition(background-color .25s linear);
+	 &:hover {
+		background: $btn-attention-hover-color;
+	}
+	 &:active,
+	 &:focus {
+		background: $btn-attention-active-color;
+	}
+}
+/* デスクトップ：最大360pxボタン */
+.btn-block-large {
+	width: 100%;
+	background: $btn-default-color;
+	@include btn-base();
+	@include btn-large();
+	@include box-sizing(border-box);
+	@include transition(background-color .25s linear);
+	 &:hover {
+		background: $btn-hover-color;
+	}
+	 &:active,
+	 &:focus {
+		background: $btn-active-color;
+	}
+}
+/* デスクトップ：最大360pxボタン 色付き */
+.btn-attention-block-large {
+	width: 100%;
+	background: $btn-attention-default-color;
+	@include btn-base();
+	@include btn-large();
+	@include box-sizing(border-box);
+	@include transition(background-color .25s linear);
+	 &:hover {
+		background: $btn-attention-hover-color;
+	}
+	 &:active,
+	 &:focus {
+		background: $btn-attention-active-color;
+	}
+}
+@media (min-width : $breakpoint-md-min) {
+	.btn-block-large {
+		max-width: 360px;
+	}
+	.btn-attention-block-large {
+		max-width: 360px;
+	}
+}
+@media (max-width : $breakpoint-md-max) {
+	.btn-search-block {
+		@include btn-search-block();
+	}
+}
+
+
+
+/* ボーダーボタン */
+.home-btn {
+	margin: 20px auto 10px;
+}
+.btn-border {
+	display: inline-block;
+	padding: 7px 10px;
+	color: #333;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	@include font-size(16);
+	[class*='acms-icon-'] {
+		color: #CCC;
+		@include font-size(14);
+	}
+	 &:hover {
+		text-decoration: none;
+	}
+}

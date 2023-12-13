@@ -1,0 +1,16 @@
+<div class="module-section">
+	<section class="search">
+	<div class="module-header clearfix">
+		<h2 class="module-heading">検索</h2>
+	</div>
+		<form action="/search.html" method="post" name="searchForm" class="acms-form search-form" role="search">
+			<div class="acms-form-action">
+				<input type="search" id="searchForm" name="keyword" value="%{KEYWORD}" size="15" class="search-form-input">
+				<input type="hidden" name="query" value="keyword">
+				<span class="acms-form-side-btn"><button type="submit" name="ACMS_POST_2GET" class="acms-btn btn-search"><span class="acms-icon-search"></span><span class="acms-hide-visually">検索</span></button></span>
+				<input type="hidden" name="tpl" value="/search.html">
+				<input type="hidden" name="bid" value="%{BID}">
+			</div>
+		</form>
+	</section>
+</div>

@@ -1,0 +1,18 @@
+@extends("/_layouts/admin.html")
+
+@section("admin-css")
+@parent
+
+<!-- カスタムCSSを記述 -->
+<!-- BEGIN_MODULE Touch_Edit -->
+<link rel="stylesheet" href="/css/dest/edit-page.min.css">
+<!-- END_MODULE Touch_Edit -->
+@endsection
+
+@section("admin-js")
+@parent
+
+<!-- カスタムJSを記述 -->
+<script src="/js/edit.js" charset="UTF-8"></script>
+<!-- GET_Rendered id="js-mapboxunit" -->
+@endsection

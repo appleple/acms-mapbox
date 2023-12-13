@@ -1,0 +1,20 @@
+/* ------------------------------
+　　メインカラム
+------------------------------ */
+.main {
+	@include clearfix();
+}
+.main-inner {
+	width: 100%;
+	max-width: $main-column-width;
+
+	&.is-space-left {
+		float: right;
+	}
+	&.is-space-right {
+		float: left;
+	}
+	&.is-space-center {
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,70 @@
+/* ------------------------------
+　　レイアウトモジュール
+------------------------------ */
+/* 背景色 */
+.layout-bg {
+	padding: 20px 0;
+	background: #F6F6F6; 
+}
+.layout-space {
+	padding: 20px 0;
+}
+/* カラムの中央寄せ */
+.center-col {
+	float: none;
+	margin: 0 auto; 
+}
+
+/* 見出し */
+.section-heading {
+	margin: 20px 0 40px 0; 
+	@include font-size(28);
+	a {
+		color: #333; 
+	}
+}
+
+/* ------------------------------
+　　各モジュール
+------------------------------ */
+/* フィールドグループ */
+.group-heading {
+	margin: 0 0 20px 0; 
+	@include font-size(18);
+	line-height: 1.2; 
+}
+.group-detail {
+	margin: 0 0 30px 0; 
+	@include font-size(16);
+	line-height: 1.7; 
+}
+
+/* ヘッドライン */
+.lp-headline {
+	@include font-size(16);
+}
+
+
+/* ------------------------------
+　　フッター
+------------------------------ */
+/* お問い合わせ誘導エリア */
+.lp-suggest-box {
+	padding: 50px 0; 
+}
+.lp-suggest-text {
+	margin: 30px 0 10px 0; 
+}
+.lp-suggest-tel {
+	margin: 0;
+	color: #C38A00;
+	font-weight: bold; 
+	font-size: 34px;
+	a {
+		color: #C38A00;
+	}
+}
+
+.btn-shadow {
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}

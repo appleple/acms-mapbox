@@ -1,0 +1,86 @@
+// ------------------------------
+//　設定
+// ------------------------------
+$enable-iphonex                    : true;
+
+// ------------------------------
+//　ベース
+// ------------------------------
+// コンテイナー
+$container                         : 1140px;
+$narrow-container                  : 960px;
+
+// メインカラム
+$main-column-width                 : 820px;
+
+// グリッドの間隔
+$grid-space                        : 20px;
+
+
+// ------------------------------
+//　ファイルのパス
+// ------------------------------
+$acms-font                         : '/themes/system/fonts/'; // フォントのパスを上書き
+
+
+// ------------------------------
+//　カラー
+// ------------------------------
+// 背景色
+$bg-color                          : #FFF;
+
+// プライマリーカラー
+$primary-color                     : #C41134;
+$primary-color-hover               : #910021;
+// セカンダリーカラー
+$secondary-color                   : #333;
+// ベースカラー
+$base-color                        : #E5E5E5;
+
+//状態
+$focus-color                       : #00c2ff;
+
+// ボタン
+$btn-default-color                 : #999;
+$btn-start-color                   : #C1C1C1;
+$btn-end-color                     : #999;
+$btn-active-color                  : #878787;
+$btn-hover-color                   : #777;
+
+// 色付きボタン
+$btn-attention-default-color       : #FF9A00;
+$btn-attention-start-color         : #FDD87D;
+$btn-attention-end-color           : #FF9A00;
+$btn-attention-active-color        : #EDA800;
+$btn-attention-hover-color         : #FF7E00;
+
+// 各SNS色
+$facebook-color                    : #1877f2;
+$twitter-color                     : #55ACEE;
+$youtube-color                     : #CD201F;
+
+
+// ------------------------------
+//　ヘッダー
+// ------------------------------
+$header-height                     : 48px;
+
+
+// ------------------------------
+//　エントリー
+// ------------------------------
+$unit-gutter                       : $grid-space;
+$entry-margin-bottom               : 25px;
+
+$entry-element-margin-bottom-sm    : 10px!default;
+$entry-element-margin-bottom-md    : 25px!default;
+$entry-element-margin-bottom-lg    : 30px!default;
+
+$entry-class                       : entry-column;
+
+
+// ------------------------------
+//　スライダー
+// ------------------------------
+$main-slider-height-mobile         : 300px;
+$main-slider-height-desktop        : 400px;

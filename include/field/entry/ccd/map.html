@@ -1,0 +1,18 @@
+<!-- Maboxライブラリ読み込み -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+<script type="text/javascript" src="js/mapboxfield.js"></script>
+ 
+ 
+<!-- BEGIN_MODULE Blog_Field -->
+<!-- 地図作成のためのアクセストークンとスタイルURL -->
+<div id="accesstoken_styleurl" data-accesstoken="{mapbox_accesstoken}" data-styleurl="{mapbox_styleurl}"></div>
+<!-- END_MODULE Blog_Field -->
+ 
+<div id='fmapwrapper' style="width: 820px; height: 320px; max-width: 100% ;">
+    <div id='fmap' style='width: 100%; height: 100%; max-width: 100%;' data-lat="{fmapbox-lat}" data-lng="{fmapbox-lng}"
+        data-zoom="{fmapbox-zoom}" data-pitch="{fmapbox-pitch}" data-bearing="{fmapbox-bearing}"
+        data-styleurl="{fmapbox_styleurl}" data-comment='{fmapbox-comment}' data-mapsize="{fmapbox-mapsize}"
+        data-maptype="show">
+    </div>
+</div>

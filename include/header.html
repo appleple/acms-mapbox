@@ -1,0 +1,36 @@
+<header class="head-wrapper">
+	<div class="acms-container">
+		<div class="header header-stack" role="banner">
+			<!-- BEGIN_MODULE Blog_Field -->
+			<div class="header-logo">
+			<div>
+				<!-- BEGIN_IF [%{BID}/eq/1/and/%{VIEW}/eq/top] --><h1 class="site-name"><!-- ELSE --><p class="site-name"><!-- END_IF --><a href="%{HOME_URL}">
+					<!-- BEGIN site_logo:veil --><img src="%{MEDIA_ARCHIVES_DIR}{site_logo@path}" alt="%{HOME_URL}" class="site-logo"><!-- END site_logo:veil --><!-- BEGIN site_name:veil --><span class="siteNameText">{site_name}</span><!-- END site_name:veil --></a>
+				<!-- BEGIN_IF [%{BID}/eq/1/and/%{VIEW}/eq/top] --></h1><!-- ELSE --></p><!-- END_IF -->
+				<!-- BEGIN_MODULE Touch_SessionWithAdministration -->
+					<p class="acms-admin-module-edit"><a href="/bid/{id}/admin/blog_edit/?edit=update#acms_custom" class="js-dialog-btn js-link_no_rewrite">編集</a></p>
+					<!-- END_MODULE Touch_SessionWithAdministration -->
+			</div>
+
+				<!-- モバイル：ヘッダーメニュー -->
+				<div class="acms-hide-md acms-hide-lg acms-hide-xl">
+					<nav class="site-header js-offcanvas-header">
+						<a id="nav-open-btn" href="#mobile-nav" data-target="#mobile-nav" class="nav-menu-btn js-mobile-nav-btn" tabindex="-1" aria-expanded="false"><span class="icon-toggle-menu"></span><span class="nav-menu-btn-text">メニュー</span></a>
+						<ul class="nav-menu-action">
+							<li class="nav-menu-action-item"><a href="%{HOME_URL}company/access.html" title="交通アクセスを見る" class="nav-menu-action-link head-access"><i class="acms-icon-map-pin"></i></a></li>
+							<li class="nav-menu-action-item"><a href="%{HOME_URL}contact/" title="メールする" class="nav-menu-action-link head-access"><i class="acms-icon-config_mail"></i></a></li><!-- BEGIN tel:veil -->
+							<li class="nav-menu-action-item"><a href="tel:{tel}" title="電話をかける" class="nav-menu-action-link head-tel"><i class="acms-icon-tel"></i></a></li><!-- END tel:veil -->
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- END_MODULE Blog_Field -->
+			<div class="header-nav">
+				<div class="acms-grid">
+					<!-- グローバルナビ -->
+					@include("/include/header/global-nav.html")
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

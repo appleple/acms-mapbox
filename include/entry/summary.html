@@ -1,0 +1,32 @@
+<!-- BEGIN_MODULE Entry_Summary id="summary_default" -->
+<!-- BEGIN entry_summary:veil -->
+<section class="module-section">
+	@include("/admin/module/setting.html")
+	<div class="module-header clearfix">
+		<h2 class="module-heading"><!-- BEGIN_IF [<!-- BEGIN moduleField -->{module_heading}<!-- END moduleField -->/nem] --><!-- BEGIN moduleField -->{module_heading}<!-- END moduleField --><!-- ELSE -->%{CATEGORY_NAME}<!-- END_IF --></h2>
+	</div>
+	<ul class="summary-default">
+		<!-- BEGIN unit:loop -->
+		<!-- BEGIN entry:loop -->
+		<li class="summary-default-item js-autoheight-r js-biggerlink {entry:loop.class}">
+			<a href="{url}" class="acms-summary">
+				<div class="summary-default-image-wrap acms-summary-image">
+					<!-- BEGIN image:veil -->
+					<img src="%{ROOT_DIR}{path}[resizeImg(120,120)]" width="120" height="120" alt=""><!-- END image:veil --><!-- BEGIN noimage -->
+					<img src="/images/noImage.png" width="120" height="120" alt="" />
+					<!-- END noimage -->
+
+				</div>
+				<div class="acms-summary-body">
+					<p class="summary-title acms-summary-heading">{title}</p>
+					<p class="summary-detail">{summary}[trim(500, '...')]</p>
+				</div>
+			</a>
+		</li><!-- END entry:loop --><!-- END unit:loop -->
+		<hr class="clearHidden" />
+	</ul>
+	<!-- ページャー -->
+	@include("/include/parts/pager.html")
+</section>
+<!-- END entry_summary:veil -->
+<!-- END_MODULE Entry_Summary -->

@@ -1,0 +1,18 @@
+<!-- BEGIN_MODULE Tag_Filter -->
+<section class="acms-entry clearfix">
+@include("/admin/module/setting.html")
+	<!-- BEGIN tagBox -->
+	<header class="acms-page-header page-header clearfix">
+		<h2 class="entry-title">選択されているタグ : <!-- BEGIN selected:loop --><a href="{url}">{name}</a><!-- BEGIN glue --> , <!-- END glue --><!-- END selected:loop --></h2>
+	</header>
+	<div class="acms-grid">
+		<div class="entry-column">
+			<!-- BEGIN choice:veil -->
+			<p id="nextTagTitle">タグを絞り込む : <!-- BEGIN choice:loop --><a href="{url}">{name}</a> <!-- END choice:loop -->
+				<!-- END choice:veil -->
+			</p>
+		</div>
+	</div>
+	<!-- END tagBox -->
+</section>
+<!-- END_MODULE Tag_Filter -->

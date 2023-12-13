@@ -1,0 +1,35 @@
+<!-- BEGIN_SetRendered id="js-mapboxunit" -->
+<!-- Maboxライブラリ読み込み -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+<!--Mapbox Geocoderの読み込み 検索フォームに入力した場所の位置を取得 -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet"
+  href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css" />
+
+<!-- 自作ライブラリ読み込み -->
+<script src="/js/mapboxunit.js"></script>
+<!-- END_SetRendered -->
+
+<!-- BEGIN unit#custom_mapbox -->
+<!-- BEGIN_MODULE Blog_Field -->
+<!-- 地図作成のためのアクセストークンとスタイルURL -->
+<div id="accesstoken_styleurl" data-accesstoken="{mapbox_accesstoken}" data-styleurl="{mapbox_styleurl}"></div>
+<!-- END_MODULE Blog_Field -->
+
+
+<!-- ここに地図が表示される -->
+<!-- BEGIN unit#custom_mapbox:loop -->
+<div class="unitid" data-unitid="{mapbox-unitid}"></div>
+<div id='mapwrapper{mapbox-unitid}' style="width: 400px; height: 300px; max-width: 100% ;">
+    <div id='map{mapbox-unitid}' style='width: 100%; height: 80%; max-width: 100%;' data-lat="{mapbox-lat}"
+        data-lng="{mapbox-lng}" data-pitch="{mapbox-pitch}" data-bearing="{mapbox-bearing}" data-zoom="{mapbox-zoom}"
+        data-setstyleurl="{mapbox_setstyleurl}" data-comment='{mapbox-comment}'
+        data-mapsize="{mapbox-mapsize}" data-maptype="show">
+    </div>
+</div>
+
+<!-- END unit#custom_mapbox:loop -->
+
+<!-- END unit#custom_mapbox -->

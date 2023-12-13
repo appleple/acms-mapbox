@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+	@include("/include/head/meta.html")
+	@include("/include/head/link.html")
+	@include("/include/head/js.html")
+</head>
+<body>
+<!-- ヘッダー -->
+@include("/include/header.html")
+
+<!-- ページタイトル -->
+<div class="page-title-wrapper">
+	<div class="page-title-filter"></div>
+	<div class="page-title-inner">
+		<div class="acms-container"><h1 class="page-title">404</h1></div>
+	</div>
+</div>
+
+<!-- トピックパス -->
+@include("/include/header/topicpath.html")
+
+<div class="acms-container js-pretty-scroll-container">
+	<!-- ※管理用パーツ -->
+	@include("/admin/action.html")
+
+	<div class="acms-grid">
+		<main class="acms-col-lg-9 main">
+			<div class="main-inner is-space-right">
+				<article class="acms-entry clearfix">
+					<header class="entry-header clearfix">
+						<h2 class="entry-title">お探しのページは見つかりませんでした。</h2>
+					</header>
+					<div class="entry-column">
+						<p>お探しのページは一時的にアクセスができない状況にあるか、移動もしくは削除された可能性があります。</p>
+						<p><a href="%{BASE_URL}">→ トップページへ戻る</a></p>
+					</div>
+				</article>
+			</div>
+		</main>
+
+		<div class="acms-col-lg-3 side">
+			<div class="js-pretty-scroll">
+				<!-- エントリーリスト -->
+				@include("/include/entry/list.html")
+
+				<!-- カテゴリーリスト -->
+				@include("/include/category/list.html")
+
+				<!-- 検索フォーム -->
+				@include("/include/parts/search.html")
+
+				<!-- ピックアップリスト -->
+				@include("/include/entry/sumamry-pickup.html")
+
+				<!-- バナー -->
+				@include("/include/siteparts/banner.html")
+
+				<!-- リンクリスト -->
+				@include("/include/siteparts/link-list.html")
+
+				<div class="acms-hide-pc">
+					<!-- モバイル：ナビゲーションメニュー -->
+					@include("/include/parts/mobile-nav.html")
+					<!-- SNSアカウントへのリンク -->
+					@include("/include/footer/sns-link.html")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- お問い合わせ -->
+@include("/include/footer/suggest.html")
+
+<!-- フッター -->
+@include("/include/footer.html")
+</body>
+</html>
+
+
