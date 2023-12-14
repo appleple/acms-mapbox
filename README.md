@@ -1,9 +1,6 @@
-#「acms-mapox」2023/12/14版
+## acms-mapox 2023/12/14版
 a-blog cmsでMapboxを利用するためのJSライブラリです。
 
-## ファイル
-- /dist/mapboxfield.js
-a-blog cmsのカスタムフィールドで利用できるモジュール
-
-- /dist/mapboxunit.js
-a-blog cmsのカスタムユニットで利用できるモジュール
+### モジュール
+- ```/dist/mapboxfield.js```は、a-blog cmsのカスタムフィールドで利用できるモジュールです。
+- ```/dist/mapboxunit.js``` は、a-blog cmsのカスタムユニットで利用できるモジュール です。
