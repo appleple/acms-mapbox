@@ -19,3 +19,7 @@ admin.html
 search.html
 template.yaml
 dist/main.js
+js/slick
+js/edit.js
+js/site.js
+js/top.js
