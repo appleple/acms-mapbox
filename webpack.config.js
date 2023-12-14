@@ -4,12 +4,12 @@ module.exports = {
     mode: 'development',
     target: ['web', 'es5'],
     entry: {
-        mapboxunit: './js/mapboxunitbeforewebpack.js',
-        mapboxcluster: './js/mapboxclusterbeforewebpack.js',
-        mapboxfield: './js/mapboxfieldbeforewebpack.js',
+        mapboxunit: './js/mapboxunit.js',
+        mapboxcluster: './js/mapboxcluster.js',
+        mapboxfield: './js/mapboxfield.js',
     },
     output: {
-        path: `${__dirname}/js`,
+        path: `${__dirname}/dist`
     },
     module: {
         rules: [
